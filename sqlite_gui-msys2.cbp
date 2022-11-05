@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="sqlite_gui-msys2" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/sqlite-gui" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add option="-g" />
+					<Add option="-D_UNICODE" />
+					<Add option="-DUNICODE" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add library="$(TARGET_COMPILER_DIR)lib/libsqlite3.a" />
+					<Add library="comctl32" />
+					<Add library="shlwapi" />
+					<Add library="ole32" />
+					<Add library="msimg32" />
+					<Add library="uuid" />
+					<Add library="gdiplus" />
+					<Add library="gdi32" />
+					<Add library="wininet" />
+					<Add library="ws2_32" />
+					<Add library="comdlg32" />
+					<Add directory="$(TARGET_COMPILER_DIR)lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/sqlite-gui" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Os" />
+					<Add option="-std=c++11" />
+					<Add option="-D_UNICODE" />
+					<Add option="-DUNICODE" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="$(TARGET_COMPILER_DIR)lib/libsqlite3.a" />
+					<Add library="comctl32" />
+					<Add library="shlwapi" />
+					<Add library="ole32" />
+					<Add library="msimg32" />
+					<Add library="uuid" />
+					<Add library="gdiplus" />
+					<Add library="gdi32" />
+					<Add library="wininet" />
+					<Add library="ws2_32" />
+					<Add library="comdlg32" />
+					<Add directory="$(TARGET_COMPILER_DIR)lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="Debug;Release;" />
+		</VirtualTargets>
+		<Unit filename="src/dialogs.cpp" />
+		<Unit filename="src/dialogs.h" />
+		<Unit filename="src/global.h" />
+		<Unit filename="src/http.cpp" />
+		<Unit filename="src/http.h" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="src/prefs.cpp" />
+		<Unit filename="src/prefs.h" />
+		<Unit filename="src/resource.h" />
+		<Unit filename="src/resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="src/tools.cpp" />
+		<Unit filename="src/tools.h" />
+		<Unit filename="src/utils.cpp" />
+		<Unit filename="src/utils.h" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
